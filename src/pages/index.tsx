@@ -17,9 +17,9 @@ const Home: NextPage = () => {
           <span>Total</span>
           <span className="font-semibold">$10</span>
         </div>
-        <div className="w-2/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 rounded-xl">
+        <button className="w-2/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 rounded-xl hover:bg-teal-500">
           Checkout
-        </div>
+        </button>
       </div>
       <div className="overflow-hidden bg-white shadow-xl rounded-3xl">
         <div className="p-6 bg-blue-500 pb-14">
