@@ -56,6 +56,11 @@ const Home: NextPage = () => {
           <span className="text-xl font-medium">Swoon Lounge</span>
           <span className="text-xs text-gray-500">Chair</span>
           <div className="flex items-center justify-between mt-3 mb-5">
+            <div className="space-x-2">
+              <button className="w-5 h-5 bg-yellow-500 rounded-full" />
+              <button className="w-5 h-5 bg-indigo-500 rounded-full" />
+              <button className="w-5 h-5 bg-teal-500 rounded-full" />
+            </div>
             <div>
               <input type="radio" />
               <input type="radio" />
