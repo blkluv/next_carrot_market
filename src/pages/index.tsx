@@ -4,20 +4,22 @@ const Home: NextPage = () => {
   return (
     <div className="grid gap-10 px-10 py-20 bg-slate-400">
       <div className="p-10 bg-white shadow-xl rounded-2xl">
-        <span>Select Item</span>
-        <div>
-          <span>Gray Chair</span>
-          <span>$19</span>
+        <span className="text-3xl font-semibold">Select Item</span>
+        <div className="flex justify-between my-2">
+          <span className="text-gray-500">Gray Chair</span>
+          <span className="font-semibold">$19</span>
         </div>
-        <div>
-          <span>Gray Chair</span>
-          <span>$19</span>
+        <div className="flex justify-between">
+          <span className="text-gray-500">Gray Chair</span>
+          <span className="font-semibold">$19</span>
         </div>
-        <div>
+        <div className="flex justify-between pt-2 mt-2 border-t-2 border-dashed">
           <span>Total</span>
-          <span>$10</span>
+          <span className="font-semibold">$10</span>
         </div>
-        <div>Checkout</div>
+        <div className="p-3 mt-5 text-center text-white bg-blue-500 rounded-xl">
+          Checkout
+        </div>
       </div>
       <div className="p-10 bg-white shadow-xl rounded-2xl"></div>
       <div className="p-10 bg-white shadow-xl rounded-2xl"></div>
