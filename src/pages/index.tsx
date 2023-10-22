@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         </ul>
         <ul>
           {["a", "b", "c", ""].map((c, i) => (
-            <li className="py-2 bg-red-500 empty:bg-blue-500" key={i}>
+            <li className="py-2 bg-red-500 empty:hidden" key={i}>
               {c}
             </li>
           ))}
