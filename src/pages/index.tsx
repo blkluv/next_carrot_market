@@ -6,7 +6,7 @@ const Home: NextPage = () => {
       <div className="p-6 bg-white shadow-xl rounded-3xl">
         <span className="text-3xl font-semibold">Select Item</span>
         <ul>
-          {[1, 2, 3, 4, 5].map((i) => (
+          {[1, 2, 3, 4].map((i) => (
             <div key={i} className="flex justify-between my-2">
               <span className="text-gray-500">Gray Chair</span>
               <span className="font-semibold">$19</span>
