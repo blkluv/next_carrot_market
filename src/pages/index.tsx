@@ -38,7 +38,7 @@ const Home: NextPage = () => {
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">340</span>
             </div>
-            <div className="w-24 h-24 rounded-full bg-zinc-300 group-hover:bg-red-300" />
+            <div className="w-24 h-24 transition-colors rounded-full bg-zinc-300 group-hover:bg-red-300" />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$340</span>
