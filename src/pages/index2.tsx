@@ -4,8 +4,8 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col p-5 space-y-2">
       <details>
-        <summary>What is my fav. food.</summary>
-        <span>김치</span>
+        <summary className="cursor-pointer">What is my fav. food.</summary>
+        <span className="selection:bg-indigo-600">김치</span>
       </details>
     </div>
   );
