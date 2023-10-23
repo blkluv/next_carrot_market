@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="p-10 bg-white shadow-xl rounded-2xl">
+      <div className="p-6 bg-white shadow-xl rounded-3xl">
         <div className="flex items-center justify-between mb-5">
           <span>⬅️</span>
           <div className="space-x-3">
