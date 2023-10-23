@@ -3,11 +3,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="flex flex-col p-5 space-y-2">
-      <ul className="list-decimal marker:text-teal-500">
-        <li>hi</li>
-        <li>hi</li>
-        <li>hi</li>
-      </ul>
+      <input type="file" className="file:border-0" />
     </div>
   );
 };
