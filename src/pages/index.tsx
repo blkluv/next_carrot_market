@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           Checkout
         </button>
       </div>
-      <div className="overflow-hidden bg-white shadow-xl rounded-3xl">
+      <div className="overflow-hidden bg-white shadow-xl rounded-3xl group">
         <div className="p-6 bg-blue-500 pb-14">
           <span className="text-2xl text-white">Profile</span>
         </div>
