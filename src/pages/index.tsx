@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 xl:place-content-center">
-      <div className="p-6 bg-white shadow-xl sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
+      <div className="flex flex-col justify-between p-6 bg-white shadow-xl sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
         <span className="text-3xl font-semibold">Select Item</span>
         <ul>
           <div className="flex justify-between my-2">
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <div className="overflow-hidden bg-white shadow-xl rounded-3xl group">
-        <div className="p-6 bg-blue-500 pb-14">
+        <div className="p-6 bg-blue-500 pb-14 xl:pb-40">
           <span className="text-2xl text-white">Profile</span>
         </div>
         <div className="relative p-6 bg-white rounded-3xl -top-5">
