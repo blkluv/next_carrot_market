@@ -3,25 +3,27 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 xl:place-content-center">
-      <div className="flex flex-col justify-between p-6 bg-white shadow-xl sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
-        <span className="text-3xl font-semibold">Select Item</span>
+      <div className="flex flex-col justify-between p-6 bg-white shadow-xl dark:bg-black sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
+        <span className="text-3xl font-semibold dark:text-white">
+          Select Item
+        </span>
         <ul>
           <div className="flex justify-between my-2">
-            <span className="text-gray-500">Gray Chair</span>
-            <span className="font-semibold">$19</span>
+            <span className="text-gray-500 dark:text-gray-100">Gray Chair</span>
+            <span className="font-semibold dark:text-white">$19</span>
           </div>
         </ul>
         <ul>
           <div className="flex justify-between my-2">
-            <span className="text-gray-500">Gray Chair</span>
-            <span className="font-semibold">$19</span>
+            <span className="text-gray-500 dark:text-gray-100">Gray Chair</span>
+            <span className="font-semibold dark:text-white">$19</span>
           </div>
         </ul>
         <div className="flex justify-between pt-2 mt-2 border-t-2 border-dashed">
           <span>Total</span>
           <span className="font-semibold">$10</span>
         </div>
-        <button className="block w-3/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 rounded-xl hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:text-red-500">
+        <button className="block w-3/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 dark:bg-black rounded-xl hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:text-red-500">
           Checkout
         </button>
       </div>
