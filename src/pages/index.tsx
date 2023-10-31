@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 xl:place-content-center">
+    <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 dark xl:place-content-center">
       <div className="flex flex-col justify-between p-6 bg-white shadow-xl dark:bg-black sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
         <span className="text-3xl font-semibold dark:text-white">
           Select Item
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <span>Total</span>
           <span className="font-semibold">$10</span>
         </div>
-        <button className="block w-3/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 dark:bg-black rounded-xl hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:text-red-500">
+        <button className="block w-3/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 dark:bg-black dark:border-white dark:border rounded-xl hover:bg-teal-500 hover:text-black dark:hover:bg-black dark:hover:text-white active:bg-yellow-500 focus:text-red-500">
           Checkout
         </button>
       </div>
