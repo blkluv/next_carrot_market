@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
+    // JIT 컴파일러(Just In Time) = 동적 번역기 = 실행 시점에서 인터프리트 방식으로 기계어 코드를 생성하면서 그 코드를 캐싱하여, 같은 함수가 여러 번 불릴 때, 매번 기계어 코드를 생성하는 것을 방지한다.
     <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 dark xl:place-content-center">
       <div className="flex flex-col justify-between p-6 bg-white shadow-xl dark:bg-black sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
         <span className="text-3xl font-semibold dark:text-white">
