@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function cls(...classnames:string[]){
+function cls(...classnames: string[]) {
   return classnames.join(" ");
 }
 
@@ -9,31 +9,33 @@ export default function Enter() {
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
   return (
-    <div className="mt-16">
+    <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
       <div className="mt-16">
         <div className="flex flex-col items-center">
           <h5 className="text-sm font-medium text-gray-500">Enter using:</h5>
           <div className="grid w-full grid-cols-2 gap-16 pb-4 mt-8 border-b">
             <button
-             className={cls(
-              "pb-4 font-medium border-b-2", 
-            method === "email" 
-             ? " text-orange-400 border-orange-500"
-             : "border-transparent text-gray-500")} 
-             onClick={onEmailClick}
-             >
+              className={cls(
+                "pb-4 font-medium border-b-2",
+                method === "email"
+                  ? " text-orange-400 border-orange-500"
+                  : "border-transparent text-gray-500"
+              )}
+              onClick={onEmailClick}
+            >
               Email address
             </button>
-            <button 
-             className={cls(
-              "pb-4 font-medium border-b-2", 
-            method === "phone" 
-             ? " text-orange-400 border-orange-500"
-             : "border-transparent text-gray-500")}
+            <button
+              className={cls(
+                "pb-4 font-medium border-b-2",
+                method === "phone"
+                  ? " text-orange-400 border-orange-500"
+                  : "border-transparent text-gray-500"
+              )}
               onClick={onPhoneClick}
             >
-             Phone number
+              Phone number
             </button>
           </div>
         </div>
@@ -43,7 +45,7 @@ export default function Enter() {
             {method === "phone" ? "Phone number" : null}
           </label>
           <div className="mt-1">
-          {method === "email" ? (
+            {method === "email" ? (
               <input
                 type="email"
                 className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
@@ -52,12 +54,14 @@ export default function Enter() {
             ) : null}
             {method === "phone" ? (
               <div>
-                <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">+82</span>
+                <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
+                  +82
+                </span>
                 <input type="number" required />
               </div>
             ) : null}
           </div>
-          <button>
+          <button className="px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
           </button>
