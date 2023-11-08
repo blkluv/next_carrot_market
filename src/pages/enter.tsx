@@ -53,7 +53,7 @@ export default function Enter() {
               />
             ) : null}
             {method === "phone" ? (
-              <div>
+              <div className="flex shadow-sm rounded-ms">
                 <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
                   +82
                 </span>
