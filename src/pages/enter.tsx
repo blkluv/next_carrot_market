@@ -73,7 +73,7 @@ export default function Enter() {
               <span className="px-2 text-sm text-gray-500 bg-white">Or enter with</span>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mt-6">
+          <div className="grid grid-cols-2 gap-3 mt-2">
             <button className="flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
               <svg
                 className="w-5 h-5"
