@@ -53,11 +53,11 @@ export default function Enter() {
               />
             ) : null}
             {method === "phone" ? (
-              <div className="flex shadow-sm rounded-ms">
+              <div className="flex rounded-md shadow-sm">
                 <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
                   +82
                 </span>
-                <input type="number" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" required />
+                <input type="number" className="w-full px-4 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" required />
               </div>
             ) : null}
           </div>
@@ -66,9 +66,9 @@ export default function Enter() {
             {method === "phone" ? "Get one-time password" : null}
           </button>
         </form>
-        <div>
-          <div>
-            <div />
+        <div className="mt-6">
+          <div className="relative">
+            <div className="absolute w-full border-t border-gray-300" />
             <div>
               <span>Or enter with</span>
             </div>
