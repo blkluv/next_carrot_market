@@ -66,7 +66,7 @@ export default function Enter() {
             {method === "phone" ? "Get one-time password" : null}
           </button>
         </form>
-        <div className="mt-6">
+        <div className="mt-8">
           <div className="relative">
             <div className="absolute w-full border-t border-gray-300" />
             <div className="relative text-center -top-3">
