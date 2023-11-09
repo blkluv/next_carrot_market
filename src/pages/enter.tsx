@@ -57,11 +57,15 @@ export default function Enter() {
                 <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
                   +82
                 </span>
-                <input type="number" className="w-full px-4 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" required />
+                <input
+                  type="number"
+                  className="w-full px-4 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
               </div>
             ) : null}
           </div>
-          <button className="px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600">
+          <button className="px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
           </button>
@@ -70,7 +74,9 @@ export default function Enter() {
           <div className="relative">
             <div className="absolute w-full border-t border-gray-300" />
             <div className="relative text-center -top-3">
-              <span className="px-2 text-sm text-gray-500 bg-white">Or enter with</span>
+              <span className="px-2 text-sm text-gray-500 bg-white">
+                Or enter with
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3 mt-2">
