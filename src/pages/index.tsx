@@ -2,95 +2,72 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    // JIT 컴파일러(Just In Time) = 동적 번역기 = 실행 시점에서 인터프리트 방식으로 기계어 코드를 생성하면서 그 코드를 캐싱하여, 같은 함수가 여러 번 불릴 때, 매번 기계어 코드를 생성하는 것을 방지한다.
-    <div className="grid min-h-screen gap-10 px-20 py-20 lg:grid-cols-2 xl:grid-cols-3 bg-slate-400 dark xl:place-content-center">
-      <div className="flex flex-col justify-between p-6 bg-white shadow-xl dark:bg-black sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 rounded-3xl">
-        <span className="text-3xl font-semibold dark:text-white">
-          Select Item
-        </span>
-        <ul>
-          <div className="flex justify-between my-2">
-            <span className="text-gray-500 dark:text-gray-100">Gray Chair</span>
-            <span className="font-semibold dark:text-white">$19</span>
-          </div>
-        </ul>
-        <ul>
-          <div className="flex justify-between my-2">
-            <span className="text-gray-500 dark:text-gray-100">Gray Chair</span>
-            <span className="font-semibold dark:text-white">$19</span>
-          </div>
-        </ul>
-        <div className="flex justify-between pt-2 mt-2 border-t-2 border-dashed">
-          <span>Total</span>
-          <span className="font-semibold">$10</span>
-        </div>
-        <button className="block w-3/4 p-3 mx-auto mt-5 text-center text-white bg-blue-500 dark:bg-black dark:border-white dark:border rounded-xl hover:bg-teal-500 hover:text-black dark:hover:bg-black dark:hover:text-white active:bg-yellow-500 focus:text-red-500">
-          Checkout
-        </button>
-      </div>
-      <div className="overflow-hidden bg-white shadow-xl rounded-3xl group">
-        <div className="p-6 portrait:bg-indigo-600 landscape:bg-teal-500 pb-14 xl:pb-40">
-          <span className="text-2xl text-white">Profile</span>
-        </div>
-        <div className="relative p-6 bg-white rounded-3xl -top-5">
-          <div className="relative flex items-end justify-between -top-16">
-            <div className="flex flex-col items-center">
-              <span className="text-sm text-gray-500">Orders</span>
-              <span className="font-medium">340</span>
-            </div>
-            <div className="w-24 h-24 transition-colors rounded-full bg-zinc-300 group-hover:bg-red-300" />
-            <div className="flex flex-col items-center">
-              <span className="text-sm text-gray-500">Spent</span>
-              <span className="font-medium">$340</span>
+    <div>
+      {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
+        <div key={i}>
+          <div>
+            <div />
+            <div>
+              <h3>New iPhone 14</h3>
+              <span>Black</span>
+              <span>$95</span>
             </div>
           </div>
-          <div className="relative flex flex-col items-center -mt-10 -mb-5">
-            <span className="text-lg font-medium">Tony Molloy</span>
-            <span className="text-sm text-gray-500">미국</span>
-          </div>
-        </div>
-      </div>
-      <div className="p-6 bg-white shadow-xl lg:col-span-2 xl:col-span-1 rounded-3xl">
-        <div className="flex items-center justify-between mb-5">
-          <span>⬅️</span>
-          <div className="space-x-3">
-            <span>⭐ 4.9</span>
-            <span className="p-2 rounded-md shadow-xl">❤️</span>
-          </div>
-        </div>
-        <div className="mb-5 h-72 bg-zinc-400" />
-        <div className="flex flex-col">
-          <span className="text-xl font-medium">Swoon Lounge</span>
-          <span className="text-xs text-gray-500">Chair</span>
-          <div className="flex items-center justify-between mt-3 mb-5">
-            <div className="space-x-2">
-              <button className="w-5 h-5 transition bg-yellow-500 bg-opacity-50 rounded-full focus:ring-2 ring-offset-2 ring-yellow-500" />
-              <button className="w-5 h-5 transition bg-indigo-500 rounded-full focus:ring-2 ring-offset-2 ring-indigo-500" />
-              <button className="w-5 h-5 transition bg-teal-500 rounded-full focus:ring-2 ring-offset-2 ring-teal-500" />
+          <div>
+            <div>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+              <span>1</span>
             </div>
             <div>
-              <input type="radio" />
-              <input type="radio" />
-              <input type="radio" />
-            </div>
-            <div className="flex items-center space-x-5">
-              <button className="flex items-center justify-center w-8 text-xl text-gray-500 bg-blue-200 rounded-lg aspect-square">
-                -
-              </button>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                ></path>
+              </svg>
               <span>1</span>
-              <button className="flex items-center justify-center w-8 text-xl text-gray-500 bg-blue-200 rounded-lg aspect-square">
-                +
-              </button>
             </div>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-2xl font-medium">$450</span>
-            <button className="px-8 py-2 text-xs text-center text-white bg-blue-500 rounded-lg">
-              Add to cart
-            </button>
           </div>
         </div>
-      </div>
+      ))}
+      <button>
+        <svg
+          className="w-6 h-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          />
+        </svg>
+      </button>
     </div>
   );
 };
