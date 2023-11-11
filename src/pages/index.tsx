@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="flex flex-col py-10 space-y-5">
       {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-        <div key={i}>
+        <div key={i} className="flex justify-between pb-4 border-b cursor-pointer">
           <div>
             <div />
             <div>
