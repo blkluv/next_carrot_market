@@ -4,7 +4,7 @@ const Upload: NextPage = () => {
   return (
     <div className="px-4 py-16">
       <div>
-        <label className="flex items-center justify-center w-full h-48 text-gray-600 border-2 border-gray-300 border-dashed rounded-md hover:text-orange-500 hover:border-orange-500">
+        <label className="flex items-center justify-center w-full h-48 text-gray-600 border-2 border-gray-300 border-dashed rounded-md cursor-pointer hover:text-orange-500 hover:border-orange-500">
           <svg
             className="w-12 h-12"
             stroke="currentColor"
