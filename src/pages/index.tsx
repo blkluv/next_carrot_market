@@ -13,8 +13,8 @@ const Home: NextPage = () => {
               <span className="mt-1 font-medium text-gray-900">$95</span>
             </div>
           </div>
-          <div>
-            <div>
+          <div className="flex items-end justify-end">
+            <div className="flex space-x-0.5 items-center text-sm text-gray-600">
               <svg
                 className="w-4 h-4"
                 fill="none"
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
               </svg>
               <span>1</span>
             </div>
-            <div>
+            <div className="flex space-x-0.5 items-center text-sm text-gray-600">
               <svg
                 className="w-4 h-4"
                 fill="none"
