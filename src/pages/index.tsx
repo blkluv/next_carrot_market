@@ -7,10 +7,10 @@ const Home: NextPage = () => {
         <div key={i} className="flex justify-between px-4 pb-4 border-b cursor-pointer">
           <div className="flex space-x-4">
             <div className="w-20 h-20 bg-gray-400 rounded-md" />
-            <div>
-              <h3>New iPhone 14</h3>
-              <span>Black</span>
-              <span>$95</span>
+            <div className="flex flex-col pt-2">
+              <h3 className="text-sm font-medium text-gray-900">New iPhone 14</h3>
+              <span className="text-xs text-gray-500">Black</span>
+              <span className="mt-1 font-medium text-gray-900">$95</span>
             </div>
           </div>
           <div>
