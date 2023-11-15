@@ -23,12 +23,12 @@ const Upload: NextPage = () => {
         </label>
       </div>
       <div>
-        <label>Price</label>
+        <label htmlFor="price">Price</label>
         <div>
           <div>
             <span>$</span>
           </div>
-          <input type="text" placeholder="0.00" />
+          <input id="price" type="text" placeholder="0.00" />
           <div>
             <span>USD</span>
           </div>
