@@ -22,5 +22,9 @@
     "eslint-config-next": "13.5.5",
     "postcss": "^8.4.31",
     "typescript": "^5"
-  }
+  },
+  "description": "Carrot Market",
+  "main": "next.config.js",
+  "author": "",
+  "license": "ISC"
 }
