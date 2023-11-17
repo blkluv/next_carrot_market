@@ -26,11 +26,11 @@ const Upload: NextPage = () => {
         <label className="text-sm font-medium text-gray-700" htmlFor="price">
           Price
         </label>
-        <div>
-          <div>
-            <span>$</span>
+        <div className="relative flex items-center rounded-md shadow-sm">
+          <div className="absolute left-0 flex items-center justify-center pl-3">
+            <span className="text-sm text-gray-500">$</span>
           </div>
-          <input id="price" type="text" placeholder="0.00" />
+          <input id="price" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none pl-7 focus:outline-none focus:ring-orange-500 focus:border-orange-500" type="text" placeholder="0.00" />
           <div>
             <span>USD</span>
           </div>
