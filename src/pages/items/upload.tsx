@@ -40,7 +40,7 @@ const Upload: NextPage = () => {
         <label className="block mb-1 text-sm font-medium text-gray-700">
           Description
         </label>
-          <textarea className="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-orange-500" rows={4} />
+          <textarea className="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500" rows={4} />
       </div>
       <button>Upload product</button>
     </div>
