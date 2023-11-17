@@ -31,8 +31,8 @@ const Upload: NextPage = () => {
             <span className="text-sm text-gray-500">$</span>
           </div>
           <input id="price" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none pl-7 focus:outline-none focus:ring-orange-500 focus:border-orange-500" type="text" placeholder="0.00" />
-          <div>
-            <span>USD</span>
+          <div className="absolute right-0 flex items-center pr-3 pointer-events-none">
+            <span className="text-gray-500">USD</span>
           </div>
         </div>
       </div>
