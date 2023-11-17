@@ -23,7 +23,9 @@ const Upload: NextPage = () => {
         </label>
       </div>
       <div className="my-5">
-        <label className="text-sm font-medium text-gray-700" htmlFor="price">Price</label>
+        <label className="text-sm font-medium text-gray-700" htmlFor="price">
+          Price
+        </label>
         <div>
           <div>
             <span>$</span>
