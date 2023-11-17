@@ -22,8 +22,8 @@ const Upload: NextPage = () => {
           <input className="hidden" type="file" />
         </label>
       </div>
-      <div>
-        <label htmlFor="price">Price</label>
+      <div className="my-5">
+        <label className="text-sm font-medium text-gray-700" htmlFor="price">Price</label>
         <div>
           <div>
             <span>$</span>
