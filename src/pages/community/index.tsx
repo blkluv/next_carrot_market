@@ -4,7 +4,9 @@ const Community: NextPage = () => {
   return (
     <div className="px-4 py-16 space-y-8">
       <div className="flex flex-col items-start">
-        <span className="flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">동네질문</span>
+        <span className="flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+            동네질문
+        </span>
         <span>
           <span>Q.</span> What is the best mandu restaurant?
         </span>
