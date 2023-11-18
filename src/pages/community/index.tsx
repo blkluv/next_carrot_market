@@ -14,8 +14,8 @@ const Community: NextPage = () => {
           <span>니꼬</span>
           <span>18시간 전</span>
         </div>
-        <div>
-          <span>
+        <div className="flex space-x-5 mt-3 text-gray-700 py-2.5 border-t border-b-2 w-full">
+          <span className="flex items-center space-x-2 text-sm">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -32,7 +32,7 @@ const Community: NextPage = () => {
             </svg>
             <span>궁금해요 1</span>
           </span>
-          <span>
+          <span className="flex items-center space-x-2 text-sm">
             <svg
               className="w-4 h-4"
               fill="none"
