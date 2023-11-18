@@ -10,7 +10,7 @@ const Community: NextPage = () => {
         <span className="mt-2 text-gray-700">
           <span className="font-medium text-orange-500">Q.</span> What is the best mandu restaurant?
         </span>
-        <div>
+        <div className="flex items-center justify-between w-full mt-5 text-xs font-medium text-gray-500">
           <span>니꼬</span>
           <span>18시간 전</span>
         </div>
