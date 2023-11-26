@@ -25,7 +25,7 @@ const ChatDetail: NextPage = () => {
         <div className="flex items-center">
           <input
             type="text"
-            className="w-full border-gray-300 rounded-full shadow-sm focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+            className="w-full pr-12 border-gray-300 rounded-full shadow-sm focus:ring-orange-500 focus:outline-none focus:border-orange-500"
           />
           <div>
             <span>&rarr;</span>
