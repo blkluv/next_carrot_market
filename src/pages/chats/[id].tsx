@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 
 const ChatDetail: NextPage = () => {
   return (
-    <div>
-      <div>
-        <div />
+    <div className="px-4 py-10">
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 rounded-full bg-slate-400" />
         <div>Hi how much are you selling them for?</div>
       </div>
       <div>
