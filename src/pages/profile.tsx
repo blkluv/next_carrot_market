@@ -5,14 +5,14 @@ const Profile: NextPage = () => {
     <div className="px-4 py-10">
       <div className="flex items-center space-x-3">
         <div className="w-16 h-16 rounded-full bg-slate-500" />
-        <div>
-          <span>Steve Jebs</span>
-          <span>Edit profile &rarr;</span>
+        <div className="flex flex-col">
+          <span className="font-medium text-gray-900">Steve Jebs</span>
+          <span className="text-sm text-gray-700">Edit profile &rarr;</span>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div className="flex justify-around mt-10">
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-center text-white bg-orange-500 rounded-full w-14 h-14">
             <svg
               className="w-6 h-6"
               fill="none"
