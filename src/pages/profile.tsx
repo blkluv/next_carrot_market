@@ -75,12 +75,12 @@ const Profile: NextPage = () => {
           </span>
         </div>
       </div>
-      <div>
-        <div>
-          <div />
+      <div className="mt-12">
+        <div className="flex items-center space-ax-4">
+          <div className="w-12 h-12 rounded-full bg-slate-400" />
           <div>
-            <h4>니꼬</h4>
-            <div>
+            <h4 className="text-sm font-bold text-gray-800">니꼬</h4>
+            <div className="flex items-center">
               <svg
                 className="w-5 h-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ const Profile: NextPage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="mt-4 text-sm text-gray-600">
           <p>
             Normally, both your asses would be dead as fucking fried chicken,
             but you happen to pull this shit while I&apos;m in a transitional
