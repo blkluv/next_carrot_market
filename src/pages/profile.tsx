@@ -53,8 +53,8 @@ const Profile: NextPage = () => {
             구매내역
           </span>
         </div>
-        <div>
-          <div>
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-center text-white bg-orange-500 rounded-full w-14 h-14">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -70,7 +70,9 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span>관심목록</span>
+          <span className="mt-2 text-sm font-medium text-gray-700">
+            관심목록
+          </span>
         </div>
       </div>
       <div>
