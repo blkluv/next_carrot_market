@@ -3,8 +3,8 @@ import type { NextPage } from "next";
 const Profile: NextPage = () => {
   return (
     <div className="px-4 py-10">
-      <div>
-        <div />
+      <div className="flex items-center space-x-3">
+        <div className="w-16 h-16 rounded-full bg-slate-500" />
         <div>
           <span>Steve Jebs</span>
           <span>Edit profile &rarr;</span>
