@@ -28,7 +28,9 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span>판매내역</span>
+          <span className="mt-2 text-sm font-medium text-gray-700">
+            판매내역
+          </span>
         </div>
         <div>
           <div>
