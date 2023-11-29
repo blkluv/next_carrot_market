@@ -3,6 +3,9 @@ import type { NextPage } from "next";
 const EditProfile: NextPage = () => {
   return (
     <div className="px-4 py-10 space-y-4">
+      <div>
+        <div className="rounded-full w-14 h-14 bg-slate-500" />
+      </div>
       <div className="space-y-1">
         <label htmlFor="email" className="text-sm font-medium text-gray-700">
           Email address
