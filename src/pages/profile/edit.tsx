@@ -3,10 +3,10 @@ import type { NextPage } from "next";
 const EditProfile: NextPage = () => {
   return (
     <div className="px-4 py-10">
-      <label htmlFor="input" className="text-sm font-medium text-gray-700">
-        Email address
-      </label>
-      <div className="mt-1">
+      <div className="space-y-1">
+        <label htmlFor="input" className="text-sm font-medium text-gray-700">
+          Email address
+        </label>
         <input
           id="input"
           type="email"
