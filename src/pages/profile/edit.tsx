@@ -30,6 +30,9 @@ const EditProfile: NextPage = () => {
           />
         </div>
       </div>
+      <button className="px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
+        Update profile
+      </button>
     </div>
   );
 };
