@@ -10,7 +10,7 @@ const EditProfile: NextPage = () => {
           className="px-3 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm cursor-pointer focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
         >
           Change
-          <input id="picture" type="file" className="hidden" />
+          <input id="picture" type="file" className="hidden" accept="image/*" />
         </label>
       </div>
       <div className="space-y-1">
