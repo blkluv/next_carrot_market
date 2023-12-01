@@ -4,11 +4,16 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col py-10 space-y-5">
       {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-        <div key={i} className="flex justify-between px-4 pb-4 border-b cursor-pointer">
+        <div
+          key={i}
+          className="flex justify-between px-4 pb-4 border-b cursor-pointer"
+        >
           <div className="flex space-x-4">
             <div className="w-20 h-20 bg-gray-400 rounded-md" />
             <div className="flex flex-col pt-2">
-              <h3 className="text-sm font-medium text-gray-900">New iPhone 14</h3>
+              <h3 className="text-sm font-medium text-gray-900">
+                New iPhone 14
+              </h3>
               <span className="text-xs text-gray-500">Black</span>
               <span className="mt-1 font-medium text-gray-900">$95</span>
             </div>
@@ -51,7 +56,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       ))}
-      <button className="fixed p-4 text-white transition-colors bg-orange-400 rounded-full shadow-xl cursor-pointer hover:bg-orange-500 bottom-24 right-5">
+      <button className="fixed p-4 text-white transition-colors bg-orange-400 border-transparent rounded-full shadow-xl cursor-pointer hover:bg-orange-500 bottom-24 right-5">
         <svg
           className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
