@@ -7,7 +7,7 @@ const LiveDetail: NextPage = () => {
       <h3 className="mt-2 text-2xl font-semibold text-gray-800">
         Let&apos;s try potatos
       </h3>
-      <div className="px-4 py-10 pb-16 space-y-4">
+      <div className="px-4 pb-16 mt-10 h-[50vh] overflow-y-scroll space-y-4">
         <div className="flex items-start space-x-2">
           <div className="w-8 h-8 rounded-full bg-slate-400" />
           <div className="w-1/2 p-2 text-sm text-gray-700 border border-gray-300 rounded-md">
