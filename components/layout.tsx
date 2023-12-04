@@ -11,5 +11,11 @@ export default function Layout({
   hasTabBar,
   children,
 }: LayoutProps) {
-  return <div></div>;
+  return (
+    <div>
+      <div></div>
+      {children}
+      <nav></nav>
+    </div>
+  );
 }
