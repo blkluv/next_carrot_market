@@ -13,9 +13,11 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <div>
-      <div></div>
+      <div className="fixed top-0 flex items-center w-full py-4 text-lg font-medium text-gray-700 bg-white border-b">
+        {title ? <span>{title}</span> : null}
+      </div>
       {children}
-      <nav></nav>
+      {hasTabBar ? <nav></nav> : null}
     </div>
   );
 }
