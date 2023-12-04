@@ -1,3 +1,5 @@
+import { cls } from "../libs/utils";
+
 interface LayoutProps {
   title?: string;
   canGoBack?: boolean;
@@ -16,7 +18,7 @@ export default function Layout({
       <div className="fixed top-0 flex items-center justify-center w-full py-3 text-lg font-medium text-gray-800 bg-white border-b">
         {title ? <span>{title}</span> : null}
       </div>
-      <div className="pt-16">{children}</div>
+      <div className={cls("pt-16", hasTabBar ? "pb-16" : "")}>{children}</div>
       {hasTabBar ? <nav></nav> : null}
     </div>
   );
