@@ -4,7 +4,7 @@ import Layout from "components/layout.tsx";
 const Home: NextPage = () => {
   return (
     <Layout title="홈">
-      <div className="flex flex-col py-10 space-y-5">
+      <div className="flex flex-col space-y-5">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div
             key={i}
