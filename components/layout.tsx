@@ -13,7 +13,7 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <div>
-      <div className="fixed top-0 flex items-center w-full py-4 text-lg font-medium text-gray-700 bg-white border-b">
+      <div className="fixed top-0 flex items-center justify-center w-full py-3 text-lg font-medium text-gray-800 bg-white border-b">
         {title ? <span>{title}</span> : null}
       </div>
       {children}
