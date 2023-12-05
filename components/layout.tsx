@@ -20,7 +20,11 @@ export default function Layout({
       </div>
       <div className={cls("pt-16", hasTabBar ? "pb-16" : "")}>{children}</div>
       {hasTabBar ? (
-        <nav className="fixed bottom-0 flex items-center justify-between max-w-xl pt-3 pb-10 text-gray-800 bg-white border-t"></nav>
+        <nav className="fixed bottom-0 flex items-center justify-between max-w-xl pt-3 pb-10 text-gray-800 bg-white border-t">
+          <div>
+            <span>홈</span>
+          </div>
+        </nav>
       ) : null}
     </div>
   );
