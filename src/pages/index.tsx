@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-
 const Home: NextPage = () => {
   return (
     <Layout title="홈" hasTabBar>
-      <div className="flex flex-col space-y-5">
+      <div className="flex flex-col space-y-5 divide-y">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div
             key={i}
-            className="flex justify-between px-4 pb-4 border-b cursor-pointer"
+            className="flex justify-between px-4 pt-5 cursor-pointer"
           >
             <div className="flex space-x-4">
               <div className="w-20 h-20 bg-gray-400 rounded-md" />
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex items-end justify-end space-x-2">
-              <div className="flex space-x-0.5 items-center text-sm text-gray-600">
+              <div className="flex space-x-0.5 items-center text-sm  text-gray-600">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -38,7 +37,7 @@ const Home: NextPage = () => {
                 </svg>
                 <span>1</span>
               </div>
-              <div className="flex space-x-0.5 items-center text-sm text-gray-600">
+              <div className="flex space-x-0.5 items-center text-sm  text-gray-600">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -58,7 +57,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         ))}
-        <button className="fixed p-4 text-white transition-colors bg-orange-400 border-transparent rounded-full shadow-xl cursor-pointer hover:bg-orange-500 bottom-24 right-5">
+        <button className="fixed p-4 text-white transition-colors bg-orange-400 rounded-full shadow-xl cursor-pointer hover:bg-orange-500 bottom-24 right-5">
           <svg
             className="w-6 h-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -79,5 +78,4 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
-
 export default Home;
