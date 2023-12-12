@@ -10,6 +10,18 @@ export default function Forms() {
     } = event;
     setUsername(value);
   };
+  const onEmailChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+    const {
+      currentTarget: { value },
+    } = event;
+    setEmail(value);
+  };
+  const onPasswordChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+    const {
+      currentTarget: { value },
+    } = event;
+    setPassword(value);
+  };
   return (
     <form>
       <input
@@ -18,8 +30,18 @@ export default function Forms() {
         type="text"
         placeholder="Username"
       />
-      <input value={email} type="email" placeholder="Email" />
-      <input value={password} type="password" placeholder="Password" />
+      <input
+        onChange={onEmailChange}
+        value={email}
+        type="email"
+        placeholder="Email"
+      />
+      <input
+        onChange={onPasswordChange}
+        value={password}
+        type="password"
+        placeholder="Password"
+      />
     </form>
   );
 }
