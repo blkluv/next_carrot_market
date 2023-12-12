@@ -16,6 +16,7 @@ export default function Forms() {
     const {
       currentTarget: { value },
     } = event;
+    setEmailError("");
     setEmail(value);
   };
   const onPasswordChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
