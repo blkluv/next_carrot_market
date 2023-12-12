@@ -5,6 +5,7 @@ export default function Forms() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formErrors, setFormErrors] = useState("");
+  const [emailError, setEmailError] = useState("");
   const onUsernameChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
     const {
       currentTarget: { value },
@@ -27,6 +28,9 @@ export default function Forms() {
     event.preventDefault();
     if (username === "" || email === "" || password === "") {
       setFormErrors("All fields are required");
+    }
+    if (!email.includes("@")) {
+      setEmailError("email is required");
     }
   };
   return (
