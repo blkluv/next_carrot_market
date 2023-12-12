@@ -50,6 +50,7 @@ export default function Forms() {
         placeholder="Email"
         required
       />
+      {emailError}
       <input
         onChange={onPasswordChange}
         value={password}
