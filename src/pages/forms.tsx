@@ -29,18 +29,21 @@ export default function Forms() {
         value={username}
         type="text"
         placeholder="Username"
+        required
       />
       <input
         onChange={onEmailChange}
         value={email}
         type="email"
         placeholder="Email"
+        required
       />
       <input
         onChange={onPasswordChange}
         value={password}
         type="password"
         placeholder="Password"
+        required
       />
       <input type="submit" value="Create Account" />
     </form>
