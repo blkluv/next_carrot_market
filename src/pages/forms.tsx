@@ -22,8 +22,12 @@ export default function Forms() {
     } = event;
     setPassword(value);
   };
+  const onSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(email, username, password);
+  };
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <input
         onChange={onUsernameChange}
         value={username}
