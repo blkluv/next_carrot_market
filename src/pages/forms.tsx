@@ -6,9 +6,9 @@ export default function Forms() {
   const [password, setPassword] = useState();
   return (
     <form>
-      <input type="text" placeholder="Username" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <input value={username} type="text" placeholder="Username" />
+      <input value={email} type="email" placeholder="Email" />
+      <input value={password} type="password" placeholder="Password" />
     </form>
   );
 }
