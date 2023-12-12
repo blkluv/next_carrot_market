@@ -4,6 +4,7 @@ export default function Forms() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [formErrors, setFormErrors] = useState("");
   const onUsernameChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
     const {
       currentTarget: { value },
@@ -24,7 +25,9 @@ export default function Forms() {
   };
   const onSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(email, username, password);
+    if (username === "" || email === "" || password === "") {
+      setFormErrors("All fields are required");
+    }
   };
   return (
     <form onSubmit={onSubmit}>
