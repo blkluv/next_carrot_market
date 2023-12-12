@@ -34,6 +34,7 @@ export default function Forms() {
         type="text"
         placeholder="Username"
         required
+        minLength={5}
       />
       <input
         onChange={onEmailChange}
