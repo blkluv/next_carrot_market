@@ -8,17 +8,25 @@ import { useForm } from "react-hook-form";
 // Easier Inputs
 
 export default function Forms() {
+  // 1. 모든 것은 useForm 훅에서 나온다!
   const { register } = useForm();
+  console.log(register("name"));
   return (
     <form>
+      {/* 2. input들을 모두 state에 '등록'하기 위해서는, register 함수를 사용한다 */}
       <input
         {...register("username")}
         type="text"
         placeholder="Username"
         required
       />
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
+      <input {...register("email")} type="email" placeholder="Email" required />
+      <input
+        {...register("password")}
+        type="password"
+        placeholder="Password"
+        required
+      />
       <input type="submit" value="Create Account" />
     </form>
   );
