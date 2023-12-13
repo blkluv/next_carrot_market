@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 
-// Less code
+// Less code (check)
 // Better validation
 // Better Errors (set, clear, display Error)
 // Have control over inputs
-// Don't deal with events
-// Easier Inputs
+// Don't deal with events (check)
+// Easier Inputs (check)
 
 export default function Forms() {
   // 1. 모든 것은 useForm 훅에서 나온다!
