@@ -15,21 +15,14 @@ export default function Forms() {
       {/* 2. input들을 모두 state에 '등록'하기 위해서는, register 함수를 사용한다 */}
       {/* 2. watch함수를 사용하기 위해서는 input 태그에서 register 함수를 사용한다. */}
       <input
-        {...register("username", {
-          required: true,
-        })}
+        {...register("username")}
         type="text"
         placeholder="Username"
         required
       />
+      <input {...register("email")} type="email" placeholder="Email" required />
       <input
-        {...register("email", { required: true })}
-        type="email"
-        placeholder="Email"
-        required
-      />
-      <input
-        {...register("password", { required: true })}
+        {...register("password")}
         type="password"
         placeholder="Password"
         required
