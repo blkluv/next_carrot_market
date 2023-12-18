@@ -6,6 +6,11 @@ import { useForm } from "react-hook-form";
 // Have control over inputs
 // Don't deal with events (check)
 // Easier Inputs (check)
+interface LoginForm {
+  username: string;
+  password: string;
+  email: string;
+}
 
 export default function Forms() {
   // 1. 모든 것은 useForm 훅에서 나온다!
