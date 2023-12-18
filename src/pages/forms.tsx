@@ -14,7 +14,7 @@ interface LoginForm {
 
 export default function Forms() {
   // 1. 모든 것은 useForm 훅에서 나온다!
-  const { register, watch, handleSubmit } = useForm();
+  const { register, watch, handleSubmit } = useForm<LoginForm>();
   const onValid = (data) => {
     console.log("I'm valid baby");
   };
