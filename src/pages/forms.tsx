@@ -13,8 +13,9 @@ export default function Forms() {
   const onValid = () => {
     console.log("I'm valid baby");
   };
+  const onInvalid = () => {};
   return (
-    <form onSubmit={handleSubmit(onValid)}>
+    <form onSubmit={handleSubmit(onValid, onInvalid)}>
       {/* 2. input들을 모두 state에 '등록'하기 위해서는, register 함수를 사용한다 */}
       {/* 2. watch함수를 사용하기 위해서는 input 태그에서 register 함수를 사용한다. */}
       <input
