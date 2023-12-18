@@ -10,10 +10,12 @@ import { useForm } from "react-hook-form";
 export default function Forms() {
   // 1. 모든 것은 useForm 훅에서 나온다!
   const { register, watch, handleSubmit } = useForm();
-  const onValid = () => {
+  const onValid = (data) => {
     console.log("I'm valid baby");
   };
-  const onInvalid = () => {};
+  const onInvalid = (errors: FieldErrors) => {
+    console.log(errors);
+  };
   return (
     <form onSubmit={handleSubmit(onValid, onInvalid)}>
       {/* 2. input들을 모두 state에 '등록'하기 위해서는, register 함수를 사용한다 */}
