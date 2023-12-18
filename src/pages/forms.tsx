@@ -27,21 +27,21 @@ export default function Forms() {
       {/* 2. watch함수를 사용하기 위해서는 input 태그에서 register 함수를 사용한다. */}
       <input
         {...register("username", {
-          required: true,
+          required: "Username is required",
         })}
         type="text"
         placeholder="Username"
       />
       <input
         {...register("email", {
-          required: true,
+          required: "Email is required",
         })}
         type="email"
         placeholder="Email"
       />
       <input
         {...register("password", {
-          required: true,
+          required: "Password is required",
         })}
         type="password"
         placeholder="Password"
