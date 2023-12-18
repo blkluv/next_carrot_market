@@ -28,7 +28,10 @@ export default function Forms() {
       <input
         {...register("username", {
           required: "Username is required",
-          minLength: 5,
+          minLength: {
+            message: "The username should be longer than 5 chars.",
+            value: 5,
+          },
         })}
         type="text"
         placeholder="Username"
