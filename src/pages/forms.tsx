@@ -39,6 +39,10 @@ export default function Forms() {
       <input
         {...register("email", {
           required: "Email is required",
+          validate: {
+            notGmail: (value) =>
+              !value.includes("@gmail.com") ? "" : "Gmail is not allowed",
+          },
         })}
         type="email"
         placeholder="Email"
