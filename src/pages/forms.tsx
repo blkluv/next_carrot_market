@@ -19,7 +19,7 @@ export default function Forms() {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginForm>({
-    mode: "onBlur",
+    mode: "onChange",
   });
   const onValid = (data: LoginForm) => {
     console.log("I'm valid baby");
