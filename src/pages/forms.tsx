@@ -25,6 +25,7 @@ export default function Forms() {
   const onInvalid = (errors: FieldErrors) => {
     console.log(errors);
   };
+  console.log(errors);
   return (
     <form onSubmit={handleSubmit(onValid, onInvalid)}>
       {/* 2. input들을 모두 state에 '등록'하기 위해서는, register 함수를 사용한다 */}
