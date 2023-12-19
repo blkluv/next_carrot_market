@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
 // Less code (check)
-// Better validation
+// Better validation (check)
 // Better Errors (set, clear, display Error)
 // Have control over inputs
 // Don't deal with events (check)
