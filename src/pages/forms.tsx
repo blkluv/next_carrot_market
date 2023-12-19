@@ -52,7 +52,6 @@ export default function Forms() {
         })}
         type="email"
         placeholder="Email"
-        className={`${Boolean(errors.email?.message) ? "border-red-500" : ""}`}
       />
       {errors.email?.message}
       <input
