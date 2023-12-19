@@ -51,6 +51,7 @@ export default function Forms() {
         type="email"
         placeholder="Email"
       />
+      {errors.email?.message}
       <input
         {...register("password", {
           required: "Password is required",
