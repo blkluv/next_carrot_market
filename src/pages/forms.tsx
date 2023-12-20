@@ -22,12 +22,13 @@ export default function Forms() {
     watch,
     setError,
     setValue,
+    reset,
   } = useForm<LoginForm>({
     mode: "onChange",
   });
   const onValid = (data: LoginForm) => {
     console.log("I'm valid baby");
-    setError("username", { message: "Taken username" });
+    reset();
   };
   const onInvalid = (errors: FieldErrors) => {
     console.log(errors);
