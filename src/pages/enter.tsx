@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import { cls } from "../libs/utils";
 import { useForm } from "react-hook-form";
+import Input from "../components/input";
 
 interface EnterForm {
   email?: string;
@@ -45,37 +46,30 @@ const Enter: NextPage = () => {
           </div>
         </div>
         <form className="flex flex-col mt-8 space-y-4">
-          <label htmlFor="input" className="text-sm font-medium text-gray-700">
-            {method === "email" ? (
-              <input name="email" label="Email address" type="email" required />
-            ) : null}
-            {method === "phone" ? "Phone number" : null}
-          </label>
-          <div className="mt-1">
-            {method === "email" ? (
+          {method === "email" ? (
+            <Input
+              register={register("email")}
+              name="email"
+              id="input"
+              type="email"
+              className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              required
+            />
+          ) : null}
+          {method === "phone" ? (
+            <div className="flex rounded-md shadow-sm">
+              <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
+                +82
+              </span>
               <input
-                register={register("email")}
-                name="email"
                 id="input"
-                type="email"
-                className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                type="number"
+                className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
                 required
               />
-            ) : null}
-            {method === "phone" ? (
-              <div className="flex rounded-md shadow-sm">
-                <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">
-                  +82
-                </span>
-                <input
-                  id="input"
-                  type="number"
-                  className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
+
           <button className="px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
