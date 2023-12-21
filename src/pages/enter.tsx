@@ -72,7 +72,9 @@ const Enter: NextPage = () => {
           ) : null}
           {method === "phone" ? (
             <Input
-              register={register("phone")}
+              register={register("phone", {
+                required: true,
+              })}
               name="phone"
               label="Phone number"
               type="number"
