@@ -44,7 +44,7 @@ const Enter: NextPage = () => {
             </button>
           </div>
         </div>
-        <form className="flex flex-col mt-8">
+        <form className="flex flex-col mt-8 space-y-4">
           <label htmlFor="input" className="text-sm font-medium text-gray-700">
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
@@ -52,6 +52,8 @@ const Enter: NextPage = () => {
           <div className="mt-1">
             {method === "email" ? (
               <input
+                register={register("email")}
+                name="email"
                 id="input"
                 type="email"
                 className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
