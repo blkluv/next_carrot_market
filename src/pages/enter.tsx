@@ -3,8 +3,13 @@ import { useState } from "react";
 import { cls } from "../libs/utils";
 import { useForm } from "react-hook-form";
 
+interface EnterForm {
+  email?: string;
+  phone?: string;
+}
+
 const Enter: NextPage = () => {
-  const {} = useForm();
+  const {} = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
