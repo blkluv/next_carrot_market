@@ -9,6 +9,7 @@ export default function Input({
   label,
   name,
   kind = "text",
+  register,
   ...rest
 }: InputProps) {
   return (
@@ -50,6 +51,7 @@ export default function Input({
           </span>
           <input
             id={name}
+            {...register}
             {...rest}
             className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500"
           />
