@@ -9,7 +9,7 @@ interface EnterForm {
 }
 
 const Enter: NextPage = () => {
-  const {} = useForm<EnterForm>();
+  const { register } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
