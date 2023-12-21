@@ -46,7 +46,9 @@ const Enter: NextPage = () => {
         </div>
         <form className="flex flex-col mt-8 space-y-4">
           <label htmlFor="input" className="text-sm font-medium text-gray-700">
-            {method === "email" ? "Email address" : null}
+            {method === "email" ? (
+              <input name="email" label="Email address" type="email" required />
+            ) : null}
             {method === "phone" ? "Phone number" : null}
           </label>
           <div className="mt-1">
