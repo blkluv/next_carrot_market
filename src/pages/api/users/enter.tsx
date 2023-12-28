@@ -9,5 +9,5 @@ export default async function handler(
     res.status(401).end();
   }
   console.log(req.body);
-  res.json({ ok: true });
+  res.status(200).end();
 }
