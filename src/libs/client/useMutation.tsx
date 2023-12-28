@@ -20,7 +20,7 @@ export default function useMutation(url: string): UseMutationResult {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => response.json().catch(() => {}))
       .then(setData)
       .catch(setError)
       .finally(() => setLoading(false));
