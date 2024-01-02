@@ -7,4 +7,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).end();
 }
 
-export default withHandler("POST", handler);
+export default async function (req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    return res.status(405).end();
+  }
+  try {
+    await handler(req, res);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ error });
+  }
+}
