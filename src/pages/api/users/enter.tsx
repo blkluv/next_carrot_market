@@ -8,3 +8,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export default withHandler("POST", handler);
+
+/* 
+---> phone # ---> User?
+
+---> Token---User #무작위 번호
+
+---> #무작위 번호 ---> SMS ---> phone # (Twilio)
+
+---> #무작위 번호 ---> Token?---User ---> Log the user In
+
+*/
