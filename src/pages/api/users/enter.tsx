@@ -12,6 +12,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       },
     });
     if (!user) {
+      console.log("Did not find. Will create.");
       user = await client.user.create({
         data: {
           name: "Anonymous",
@@ -19,6 +20,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         },
       });
     }
+    console.log(user);
   }
   return res.status(200).end();
 }
