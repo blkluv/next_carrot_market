@@ -3,7 +3,23 @@ import client from "src/libs/server/client";
 import withHandler from "src/libs/server/withHandler";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req.body);
+  const { phone, email } = req.body;
+  let user;
+  if (email) {
+    user = await client.user.findUnique({
+      where: {
+        email,
+      },
+    });
+    if (!user) {
+      user = await client.user.create({
+        data: {
+          name: "Anonymous",
+          email,
+        },
+      });
+    }
+  }
   return res.status(200).end();
 }
 
