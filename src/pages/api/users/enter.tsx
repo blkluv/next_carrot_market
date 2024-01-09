@@ -26,7 +26,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (phone) {
     user = await client.user.findUnique({
       where: {
-        phone,
+        phone: +phone,
       },
     });
     if (user) console.log("found it.");
