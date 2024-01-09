@@ -11,6 +11,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         email,
       },
     });
+    if (user) console.log("found it.");
     if (!user) {
       console.log("Did not find. Will create.");
       user = await client.user.create({
