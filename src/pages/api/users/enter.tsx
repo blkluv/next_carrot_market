@@ -35,7 +35,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       user = await client.user.create({
         data: {
           name: "Anonymous",
-          phone,
+          phone: +phone,
         },
       });
     }
