@@ -15,7 +15,17 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     },
     update: {},
   });
-  const token = await client.token;
+  const token = await client.token.create({
+    data: {
+      payload: "1234",
+      user: {
+        connect: {
+          id: user.id,
+        },
+      },
+    },
+  });
+  console.log(token);
   // if (email) {
   //   user = await client.user.findUnique({
   //     where: {
