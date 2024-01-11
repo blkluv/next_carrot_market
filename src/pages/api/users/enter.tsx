@@ -5,7 +5,6 @@ import withHandler from "src/libs/server/withHandler";
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { phone, email } = req.body;
   const payload = phone ? { phone: +phone } : { email };
-
   const token = await client.token.create({
     data: {
       payload: "1234",
