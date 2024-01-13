@@ -49,7 +49,9 @@ async function handler(
   //   }
   //   console.log(user);
   // }
-  return res.status(200).end();
+  return res.json({
+    ok: true,
+  });
 }
 
 export default withHandler("POST", handler);
