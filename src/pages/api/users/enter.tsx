@@ -1,11 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import client from "src/libs/server/client";
-import withHandler from "src/libs/server/withHandler";
-
-interface ResponseType {
-  ok: boolean;
-  [key: string]: any;
-}
+import withHandler, { ResponseType } from "src/libs/server/withHandler";
 
 async function handler(
   req: NextApiRequest,
