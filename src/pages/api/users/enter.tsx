@@ -7,7 +7,10 @@ interface ResponseType {
   [key: string]: any;
 }
 
-async function handler(req: NextApiRequest, res: NextApiResponse) {
+async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<ResponseType>
+) {
   const { phone, email } = req.body;
   const user = phone ? { phone: +phone } : { email };
   const payload = Math.floor(100000 + Math.random() * 900000) + "";
