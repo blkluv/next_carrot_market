@@ -2,6 +2,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 import client from "src/libs/server/client";
 import withHandler from "src/libs/server/withHandler";
 
+interface ResponseType {
+  ok: boolean;
+  [key: string]: any;
+}
+
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { phone, email } = req.body;
   const user = phone ? { phone: +phone } : { email };
