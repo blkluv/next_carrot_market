@@ -48,6 +48,13 @@ async function handler(
   //   }
   //   console.log(user);
   // }
+  if (phone) {
+    await twilioClient.messages.create({
+      messagingServiceSid: process.env.TWILIO_MESSAGING_SEVICE_SID,
+      to: process.env.MY_PHONE!,
+      body: `Your login token is ${payload}.`,
+    });
+  }
   return res.json({
     ok: true,
   });
