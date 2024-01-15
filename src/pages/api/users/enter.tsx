@@ -49,11 +49,12 @@ async function handler(
   //   console.log(user);
   // }
   if (phone) {
-    await twilioClient.messages.create({
+    const message = await twilioClient.messages.create({
       messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
       to: process.env.MY_PHONE!,
       body: `Your login token is ${payload}.`,
     });
+    console.log(message);
   }
   return res.json({
     ok: true,
