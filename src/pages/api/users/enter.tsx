@@ -66,22 +66,26 @@ async function handler(
 
     // ## nodemailer Email 보내기
   } else if (email) {
-    const sendEmail = await transporter
-      .sendMail({
-        from: `ABC <johj0703@gmail.com>`,
-        to: email,
-        subject: "token",
-        text: `your login token is ${randomToken}`,
-        html: `
-          <div style="text-align: center;">
-            <h3 style="color: #FA5882">ABC</h3>
-            <br />
-            <p>your login token is ${randomToken}</p>
-          </div>
-      `,
-      })
-      .then((result: any) => console.log(result))
-      .catch((err: any) => console.log(err));
+    const mailOptions = {
+      from: whguswns703@naver.com,
+      to: email,
+      subject: "Nomad Carrot Authentication Email",
+      text: `Authentication Code : ${payload}`,
+    };
+    const result = await smtpTransport.sendMail(
+      mailOptions,
+      (error, responses) => {
+        if (error) {
+          console.log(error);
+          return null;
+        } else {
+          console.log(responses);
+          return null;
+        }
+      }
+    );
+    smtpTransport.close();
+    console.log(result);
   }
 
   return res.status(200).json({ ok: true });
