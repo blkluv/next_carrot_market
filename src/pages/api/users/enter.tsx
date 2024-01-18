@@ -40,8 +40,8 @@ async function handler(
     console.log(message);
   } else if (email) {
     const email = await mail.send({
-      from: "nico@nomadcoders.co",
-      to: "nico@nomadcoders.co",
+      from: "whguswns703@naver.com",
+      to: "whguswns703@naver.com",
       subject: "Your Carrot Market Verification Email",
       text: `Your token is ${payload}`,
       html: `<strong>Your token is ${payload}</strong>`,
