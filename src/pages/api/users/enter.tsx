@@ -1,108 +1,55 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { client } from "src/libs/server/client";
-import withHandler, { ResponseType } from "src/libs/server/withHandler";
+import mail from "@sendgrid/mail";
 import twilio from "twilio";
-import { withApiSession } from "src/libs/server/withHandler";
+import { NextApiRequest, NextApiResponse } from "next";
+import withHandler, { ResponseType } from "src/libs/server/withHandler";
+import client from "src/libs/server/client";
 
-// npm install nodemailer (nodemailer설치)
-// nodemailer 기초 설정
-const nodemailer = require("nodemailer");
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_ID,
-    pass: process.env.GMAIL_PWD,
-  },
-});
-
-// twilio 기초 설정
-const twilioClient = twilio(
-  process.env.TWILIO_ACCOUNT_SID,
-  process.env.TWILIO_AUTH_TOKEN
-);
+mail.setApiKey(process.env.SENDGRID_KEY!);
+const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 
 async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
   const { phone, email } = req.body;
-
-  const user = phone ? { phone: phone } : email ? { email: email } : null; //...payload
-
+  const user = phone ? { phone: +phone } : email ? { email } : null;
   if (!user) return res.status(400).json({ ok: false });
-
-  //token 생성
-  const randomToken = Math.floor(100000 + Math.random() * 900000) + "";
+  const payload = Math.floor(100000 + Math.random() * 900000) + "";
   const token = await client.token.create({
     data: {
-      //Model - token.payload 레코드생성
-      payload: randomToken,
-      //Model - token.user == User 레코드생성
+      payload,
       user: {
         connectOrCreate: {
           where: {
             ...user,
           },
           create: {
-            // 존재하지 않을떄 만든다.
-            name: "익명의 사용자",
+            name: "Anonymous",
             ...user,
           },
         },
       },
     },
   });
-  console.log(token);
-
-  // ## twilio mms 보내기
   if (phone) {
     const message = await twilioClient.messages.create({
-      messagingServiceSid: process.env.TWILIO_MMS_SID,
-      to: process.env.MY_PHONE!, //phone , 원래는 전화번호 req 받은값
-      body: `your login token is ${randomToken}`,
+      messagingServiceSid: process.env.TWILIO_MSID,
+      to: process.env.MY_PHONE!,
+      body: `Your login token is ${payload}.`,
     });
     console.log(message);
-
-    // ## nodemailer Email 보내기
   } else if (email) {
-    const mailOptions = {
-      from: whguswns703@naver.com,
-      to: email,
-      subject: "Nomad Carrot Authentication Email",
-      text: `Authentication Code : ${payload}`,
-    };
-    const result = await smtpTransport.sendMail(
-      mailOptions,
-      (error, responses) => {
-        if (error) {
-          console.log(error);
-          return null;
-        } else {
-          console.log(responses);
-          return null;
-        }
-      }
-    );
-    smtpTransport.close();
-    console.log(result);
+    const email = await mail.send({
+      from: "nico@nomadcoders.co",
+      to: "nico@nomadcoders.co",
+      subject: "Your Carrot Market Verification Email",
+      text: `Your token is ${payload}`,
+      html: `<strong>Your token is ${payload}</strong>`,
+    });
+    console.log(email);
   }
-
-  return res.status(200).json({ ok: true });
+  return res.json({
+    ok: true,
+  });
 }
-
-// POST, GET 을 확인 하는 함수.. (일종의 미들웨어..)
-export default withApiSession(
-  withHandler({ methods: ["POST"], fn: handler, isPrivate: false })
-);
-
-/* 
----> phone # ---> User?
-
----> Token---User #무작위 번호
-
----> #무작위 번호 ---> SMS ---> phone # (Twilio)
-
----> #무작위 번호 ---> Token?---User ---> Log the user In
-
-*/
+export default withHandler("POST", handler);
