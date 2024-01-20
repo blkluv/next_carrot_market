@@ -5,9 +5,11 @@ interface UseMutationState {
   data?: object;
   error?: object;
 }
-type UseMutationResult = [(data: any) => void, UseMutationState];
+type UseMutationResult<T> = [(data: any) => void, UseMutationState];
 
-export default function useMutation(url: string): UseMutationResult {
+export default function useMutation<T = any>(
+  url: string
+): UseMutationResult<T> {
   const [state, setState] = useState({
     loading: false,
     data: undefined,
