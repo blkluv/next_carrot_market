@@ -41,7 +41,8 @@ const Enter: NextPage = () => {
     enter(validForm);
   };
   const onTokenValid = (validForm: TokenForm) => {
-    console.log(validForm);
+    if (tokenLoading) return;
+    confirmToken(validForm);
   };
   return (
     <div className="px-4 mt-16">
