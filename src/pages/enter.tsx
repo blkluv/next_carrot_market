@@ -15,13 +15,15 @@ interface TokenForm {
   token: string;
 }
 
-interface EnterMutationResult {
+interface MutationResult {
   ok: boolean;
 }
 
 const Enter: NextPage = () => {
   const [enter, { loading, data, error }] =
-    useMutation<EnterMutationResult>("/api/users/enter");
+    useMutation<MutationResult>("/api/users/enter");
+  const [confirmToken, { loading: tokenLoading, data: tokenData }] =
+    useMutation<MutationResult>("/api/users/confirm");
   const [submitting, setSubmitting] = useState(false);
   const { register, handleSubmit, reset } = useForm<EnterForm>();
   const { register: tokenRegister, handleSubmit: tokenHandleSubmit } =
@@ -38,14 +40,16 @@ const Enter: NextPage = () => {
   const onValid = (validForm: EnterForm) => {
     enter(validForm);
   };
-  console.log(data);
+  const onTokenValid = (validForm: TokenForm) => {
+    console.log(validForm);
+  };
   return (
     <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
       <div className="mt-12">
         {data?.ok ? (
           <form
-            onSubmit={handleSubmit(onValid)}
+            onSubmit={tokenHandleSubmit(onTokenValid)}
             className="flex flex-col mt-8 space-y-4"
           >
             <Input
