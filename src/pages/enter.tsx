@@ -37,7 +37,23 @@ const Enter: NextPage = () => {
     <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
       <div className="mt-12">
-        {data?.ok ? null : (
+        {data?.ok ? (
+          <form
+            onSubmit={handleSubmit(onValid)}
+            className="flex flex-col mt-8 space-y-4"
+          >
+            <Input
+              register={register("token", {
+                required: true,
+              })}
+              name="token"
+              label="Confirmation Token"
+              type="number"
+              required
+            />
+            <Button text={submitting ? "Loading" : "Confirm Token"} />
+          </form>
+        ) : (
           <>
             <div className="flex flex-col items-center">
               <h5 className="text-sm font-medium text-gray-500">
@@ -68,40 +84,6 @@ const Enter: NextPage = () => {
                 </button>
               </div>
             </div>
-            <form
-              onSubmit={handleSubmit(onValid)}
-              className="flex flex-col mt-8 space-y-4"
-            >
-              {method === "email" ? (
-                <Input
-                  register={register("email", {
-                    required: true,
-                  })}
-                  name="email"
-                  label="Email address"
-                  type="email"
-                  required
-                />
-              ) : null}
-              {method === "phone" ? (
-                <Input
-                  register={register("phone", {
-                    required: true,
-                  })}
-                  name="phone"
-                  label="Phone number"
-                  type="number"
-                  kind="phone"
-                  required
-                />
-              ) : null}
-              {method === "email" ? <Button text={"Get login link"} /> : null}
-              {method === "phone" ? (
-                <Button
-                  text={submitting ? "Loading" : "Get one-time password"}
-                />
-              ) : null}
-            </form>
           </>
         )}
 
