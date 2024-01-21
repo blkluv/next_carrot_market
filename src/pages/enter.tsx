@@ -49,7 +49,7 @@ const Enter: NextPage = () => {
             className="flex flex-col mt-8 space-y-4"
           >
             <Input
-              register={register("token", {
+              register={tokenRegister("token", {
                 required: true,
               })}
               name="token"
