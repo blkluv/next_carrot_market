@@ -7,7 +7,6 @@ async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
-  console.log(req.session);
   const { token } = req.body;
   console.log(token);
   res.status(200).end();
