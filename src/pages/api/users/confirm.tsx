@@ -8,7 +8,12 @@ async function handler(
   res: NextApiResponse<ResponseType>
 ) {
   const { token } = req.body;
-  console.log(token);
+  const exists = await client.token.findUnique({
+    where: {
+      payload: token,
+    },
+  });
+  if (!exists) res.status(404).end();
   res.status(200).end();
 }
 
