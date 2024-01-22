@@ -12,8 +12,10 @@ async function handler(
     where: {
       payload: token,
     },
+    include: { user: true },
   });
   if (!exists) res.status(404).end();
+  console.log(exists);
   res.status(200).end();
 }
 
