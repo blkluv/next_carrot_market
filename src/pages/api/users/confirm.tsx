@@ -1,3 +1,4 @@
+import { withIronSessionApiRoute } from "iron-session/next";
 import { NextApiRequest, NextApiResponse } from "next";
 import withHandler, { ResponseType } from "src/libs/server/withHandler";
 import client from "src/libs/server/client";
@@ -10,4 +11,7 @@ async function handler(
   console.log(token);
   res.status(200).end();
 }
-export default withHandler("POST", handler);
+export default withIronSessionApiRoute(withHandler("POST", handler), {
+  cookieName: "carrotsession",
+  password: "7894541685",
+});
