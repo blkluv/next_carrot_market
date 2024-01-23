@@ -15,11 +15,11 @@ async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
-  console.log(req.session.user)
+  console.log(req.session.user);
   res.status(200).end();
 }
 
-export default withIronSessionApiRoute(withHandler("POST", handler), {
+export default withIronSessionApiRoute(withHandler("GET", handler), {
   cookieName: "carrotsession",
   password: "789454168587496541879496519846541981965746851894651",
 });
