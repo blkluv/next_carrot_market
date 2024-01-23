@@ -16,7 +16,13 @@ async function handler(
   res: NextApiResponse<ResponseType>
 ) {
   console.log(req.session.user);
-  res.status(200).end();
+  const profile = await client.user.findUnique({
+    where: { id: req.session.user?.id },
+  });
+  res.json({
+    ok: true,
+    profile,
+  });
 }
 
 export default withIronSessionApiRoute(withHandler("GET", handler), {
