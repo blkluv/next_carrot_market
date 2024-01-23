@@ -21,7 +21,7 @@ async function handler(
       payload: token,
     },
   });
-  if (!exists) res.status(404).end();
+  if (!exists) return res.status(404).end();
   req.session.user = {
     id: exists.userId,
   };
