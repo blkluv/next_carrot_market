@@ -1,4 +1,3 @@
-import { withIronSessionApiRoute } from "iron-session/next";
 import { NextApiRequest, NextApiResponse } from "next";
 import withHandler, { ResponseType } from "src/libs/server/withHandler";
 import client from "src/libs/server/client";
