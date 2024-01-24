@@ -50,7 +50,7 @@ const Enter: NextPage = () => {
     if (tokenData?.ok) {
       router.push("/");
     }
-  }, [tokenData]);
+  }, [tokenData, router]);
   return (
     <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
