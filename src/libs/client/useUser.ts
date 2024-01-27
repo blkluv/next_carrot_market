@@ -13,7 +13,7 @@ export default function useUser() {
         }
         setUser(data.profile);
       });
-  }, []);
+  }, [router]);
   return user;
 }
 0;
