@@ -16,4 +16,3 @@ export default function useUser() {
   }, [router]);
   return user;
 }
-0;
