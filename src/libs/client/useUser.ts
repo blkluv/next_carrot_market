@@ -5,7 +5,7 @@ import useSWR from "swr";
 const fetcher = (url: string) => fetch(url).then((response) => response.json());
 
 export default function useUser() {
-  const {} = useSWR("/api/users/me");
+  const {} = useSWR("/api/users/me", fetcher);
   const [user, setUser] = useState();
   const router = useRouter();
   useEffect(() => {
