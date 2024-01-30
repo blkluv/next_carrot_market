@@ -9,5 +9,5 @@ export default function useUser() {
   const router = useRouter();
 
   // return router.replace("/enter");
-  return data;
+  return { user: data?.profile, isLoading: !data && !error };
 }
