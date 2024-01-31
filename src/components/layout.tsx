@@ -50,7 +50,7 @@ export default function Layout({
       <div className={cls("pt-12", hasTabBar ? "pb-24" : "")}>{children}</div>
       {hasTabBar ? (
         <nav className="fixed bottom-0 flex justify-between w-full max-w-xl px-10 pt-3 pb-5 text-xs text-gray-700 bg-white border-t">
-          <Link href="/" className="flex flex-col items-center space-y-2">
+          <Link href="/" className="flex flex-col items-center space-y-2" legacyBehavior>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -70,7 +70,7 @@ export default function Layout({
           <Link
             href="/community"
             className="flex flex-col items-center space-y-2"
-          >
+            legacyBehavior>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -87,7 +87,10 @@ export default function Layout({
             </svg>
             <span>동내생활</span>
           </Link>
-          <Link href="/chats" className="flex flex-col items-center space-y-2">
+          <Link
+            href="/chats"
+            className="flex flex-col items-center space-y-2"
+            legacyBehavior>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -104,7 +107,10 @@ export default function Layout({
             </svg>
             <span>채팅</span>
           </Link>
-          <Link href="/live" className="flex flex-col items-center space-y-2">
+          <Link
+            href="/live"
+            className="flex flex-col items-center space-y-2"
+            legacyBehavior>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -124,7 +130,7 @@ export default function Layout({
           <Link
             href="/profile"
             className="flex flex-col items-center space-y-2"
-          >
+            legacyBehavior>
             <svg
               className="w-6 h-6"
               fill="none"
