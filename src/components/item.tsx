@@ -16,10 +16,10 @@ export default function Item({
   id,
 }: ItemProps) {
   return (
-    (<Link
-      href={`/items/${id}`}
-      className="flex justify-between px-4 pt-5 cursor-pointer">
-
+    <Link
+      href={`/products/${id}`}
+      className="flex justify-between px-4 pt-5 cursor-pointer"
+    >
       <div className="flex space-x-4">
         <div className="w-20 h-20 bg-gray-400 rounded-md" />
         <div className="flex flex-col pt-2">
@@ -63,7 +63,6 @@ export default function Item({
           <span>{comments}</span>
         </div>
       </div>
-
-    </Link>)
+    </Link>
   );
 }
