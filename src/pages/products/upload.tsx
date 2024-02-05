@@ -12,7 +12,7 @@ interface UploadProductForm {
 }
 
 const Upload: NextPage = () => {
-  const {} = useForm();
+  const { register, handleSubmit } = useForm<UploadProductForm>();
   return (
     <div className="px-4 py-10 space-y-5">
       <div>
@@ -72,23 +72,28 @@ const Upload: NextPage = () => {
           </div>
         </div>
       </div>
-      <div>
-        <label
-          htmlFor="description"
-          className="block mb-1 text-sm font-medium text-gray-700"
-        >
-          Description
-        </label>
-
-        <textarea
-          id="description"
-          className="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 "
-          rows={4}
-        />
-      </div>
-      <button className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
-        Upload item
-      </button>
+      <Input
+        register={register("name")}
+        required
+        label="Name"
+        name="name"
+        type="text"
+      />
+      <Input
+        register={register("price")}
+        required
+        label="Price"
+        name="price"
+        type="text"
+        kind="price"
+      />
+      <TextArea
+        register={register("description")}
+        name="description"
+        label="Description"
+        required
+      />
+      <Button text="Upload item" />
     </div>
   );
 };
