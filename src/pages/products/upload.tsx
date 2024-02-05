@@ -1,6 +1,12 @@
 import type { NextPage } from "next";
+import Button from "src/components/button";
+import Input from "src/components/input";
+import Layout from "src/components/layout";
+import TextArea from "src/components/textarea";
+import { useForm } from "react-hook-form";
 
 const Upload: NextPage = () => {
+  const {} = useForm();
   return (
     <div className="px-4 py-10 space-y-5">
       <div>
@@ -74,7 +80,7 @@ const Upload: NextPage = () => {
           rows={4}
         />
       </div>
-      <button className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm  hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
+      <button className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
         Upload item
       </button>
     </div>
