@@ -16,7 +16,8 @@ const Upload: NextPage = () => {
   const { register, handleSubmit } = useForm<UploadProductForm>();
   const [uploadProduct, { loading, data }] = useMutation("/api/products");
   const onValid = (data: UploadProductForm) => {
-    console.log(data);
+    if (loading) return;
+    uploadProduct(data);
   };
   return (
     <Layout canGoBack title="Upload Product">
