@@ -5,6 +5,12 @@ import Layout from "src/components/layout";
 import TextArea from "src/components/textarea";
 import { useForm } from "react-hook-form";
 
+interface UploadProductForm {
+  name: string;
+  price: string;
+  description: string;
+}
+
 const Upload: NextPage = () => {
   const {} = useForm();
   return (
