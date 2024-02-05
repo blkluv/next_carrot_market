@@ -73,14 +73,14 @@ const Upload: NextPage = () => {
         </div>
       </div>
       <Input
-        register={register("name")}
+        register={register("name", { required: true })}
         required
         label="Name"
         name="name"
         type="text"
       />
       <Input
-        register={register("price")}
+        register={register("price", { required: true })}
         required
         label="Price"
         name="price"
@@ -88,7 +88,7 @@ const Upload: NextPage = () => {
         kind="price"
       />
       <TextArea
-        register={register("description")}
+        register={register("description", { required: true })}
         name="description"
         label="Description"
         required
