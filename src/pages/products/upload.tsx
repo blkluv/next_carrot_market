@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 interface UploadProductForm {
   name: string;
-  price: string;
+  price: number;
   description: string;
 }
 
