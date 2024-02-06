@@ -5,6 +5,7 @@ import Layout from "src/components/layout";
 import TextArea from "src/components/textarea";
 import { useForm } from "react-hook-form";
 import useMutation from "src/libs/client/useMutation";
+import { useEffect } from "react";
 
 interface UploadProductForm {
   name: string;
@@ -19,6 +20,10 @@ const Upload: NextPage = () => {
     if (loading) return;
     uploadProduct(data);
   };
+  useEffect(() => {
+    if (data.ok) {
+    }
+  }, [data]);
   return (
     <Layout canGoBack title="Upload Product">
       <form className="p-4 space-y-4" onSubmit={handleSubmit(onValid)}>
