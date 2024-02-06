@@ -6,6 +6,7 @@ import TextArea from "src/components/textarea";
 import { useForm } from "react-hook-form";
 import useMutation from "src/libs/client/useMutation";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 interface UploadProductForm {
   name: string;
@@ -19,6 +20,7 @@ interface UploadProductMutation {
 }
 
 const Upload: NextPage = () => {
+  const router = useRouter();
   const { register, handleSubmit } = useForm<UploadProductForm>();
   const [uploadProduct, { loading, data }] =
     useMutation<UploadProductMutation>("/api/products");
@@ -28,8 +30,9 @@ const Upload: NextPage = () => {
   };
   useEffect(() => {
     if (data?.ok) {
+      router.push(`/products/${data.product.id}`);
     }
-  }, [data]);
+  }, [data, router]);
   return (
     <Layout canGoBack title="Upload Product">
       <form className="p-4 space-y-4" onSubmit={handleSubmit(onValid)}>
