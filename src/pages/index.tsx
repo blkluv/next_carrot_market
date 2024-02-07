@@ -4,9 +4,11 @@ import Item from "src/components/item";
 import Layout from "src/components/layout";
 import useUser from "src/libs/client/useUser";
 import Head from "next/head";
+import useSWR from "swr";
 
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
+  const {} = useSWR("/api/products");
   return (
     <Layout title="홈" hasTabBar>
       <Head>
