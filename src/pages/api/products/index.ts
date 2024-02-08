@@ -32,7 +32,7 @@ async function handler(
 
 export default withApiSession(
   withHandler({
-    method: "POST",
+    methods: ["GET", "POST"],
     handler,
   })
 );
