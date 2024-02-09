@@ -7,7 +7,7 @@ async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
-  console.log(req.query);
+  const { id } = req.query;
   res.json({ ok: true });
 }
 
