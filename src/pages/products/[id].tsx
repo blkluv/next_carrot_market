@@ -5,7 +5,7 @@ import useSWR from "swr";
 
 const ItemDetail: NextPage = () => {
   const router = useRouter();
-  const {} = useSWR(
+  const { data } = useSWR(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
   return (
