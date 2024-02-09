@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import Layout from "src/components/layout";
 
 const ItemDetail: NextPage = () => {
+  const router = useRouter();
   return (
     <Layout canGoBack>
       <div className="px-4 py-10">
