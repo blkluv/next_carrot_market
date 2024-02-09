@@ -8,6 +8,11 @@ async function handler(
   res: NextApiResponse<ResponseType>
 ) {
   const { id } = req.query;
+  const product = await client.product.findUnique({
+    where: {
+      id: +id.toString(),
+    },
+  });
   res.json({ ok: true });
 }
 
