@@ -13,7 +13,7 @@ async function handler(
       id: +id.toString(),
     },
   });
-  res.json({ ok: true });
+  res.json({ ok: true, product });
 }
 
 export default withApiSession(
