@@ -12,7 +12,11 @@ async function handler(
     where: {
       id: +id.toString(),
     },
+    include: {
+      user: true,
+    },
   });
+  console.log(product);
   res.json({ ok: true, product });
 }
 
