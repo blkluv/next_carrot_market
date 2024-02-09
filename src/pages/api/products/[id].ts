@@ -6,7 +6,10 @@ import { withApiSession } from "src/libs/server/withSession";
 async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
-) {}
+) {
+  console.log(req.query);
+  res.json({ ok: true });
+}
 
 export default withApiSession(
   withHandler({
