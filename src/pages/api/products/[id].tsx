@@ -7,7 +7,9 @@ import useSWR from "swr";
 const ItemDetail: NextPage = () => {
   const router = useRouter();
   console.log(router.query);
-
+  const {} = useSWR(
+    router.query.id ? `/api/products/${router.query.id}` : null
+  );
   return (
     <Layout canGoBack>
       <div className="px-4 py-4">
