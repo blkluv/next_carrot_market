@@ -13,7 +13,12 @@ async function handler(
       id: +id.toString(),
     },
     include: {
-      user: true,
+      user: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
     },
   });
   console.log(product);
