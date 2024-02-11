@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import Layout from "src/components/layout";
 import useSWR from "swr";
@@ -19,9 +20,11 @@ const ItemDetail: NextPage = () => {
               <p className="text-sm font-medium text-gray-700">
                 {data?.product?.user?.name}
               </p>
-              <p className="text-xs font-medium text-gray-500">
-                View profile &rarr;
-              </p>
+              <Link href={`/users/profiles/${data?.product?.user?.id}`}>
+                <a className="text-xs font-medium text-gray-500">
+                  View profile &rarr;
+                </a>
+              </Link>
             </div>
           </div>
           <div className="mt-5">
