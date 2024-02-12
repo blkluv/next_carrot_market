@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import Layout from "src/components/layout";
+import { useRouter } from "next/router";
 import useSWR from "swr";
+import Link from "next/link";
 
 const ItemDetail: NextPage = () => {
   const router = useRouter();
