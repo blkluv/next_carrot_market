@@ -22,7 +22,7 @@ async function handler(
       },
     },
   });
-  name: ["galaxy", "s24"];
+  const terms = product?.name.split(" ");
   console.log(product);
   res.json({ ok: true, product });
 }
