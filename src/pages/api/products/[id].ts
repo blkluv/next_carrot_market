@@ -27,6 +27,7 @@ async function handler(
       contains: word,
     },
   }));
+  console.log(terms);
   res.json({ ok: true, product });
 }
 
