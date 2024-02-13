@@ -22,7 +22,11 @@ async function handler(
       },
     },
   });
-  const terms = product?.name.split(" ");
+  const terms = product?.name.split(" ").map((word) => ({
+    name: {
+      contains: word,
+    },
+  }));
   res.json({ ok: true, product });
 }
 
