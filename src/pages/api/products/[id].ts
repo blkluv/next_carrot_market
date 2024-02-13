@@ -23,7 +23,6 @@ async function handler(
     },
   });
   const terms = product?.name.split(" ");
-  console.log(product);
   res.json({ ok: true, product });
 }
 
