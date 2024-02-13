@@ -22,6 +22,7 @@ async function handler(
       },
     },
   });
+  name: ["galaxy", "s24"];
   console.log(product);
   res.json({ ok: true, product });
 }
