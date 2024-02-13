@@ -5,9 +5,12 @@ import useSWR from "swr";
 import Link from "next/link";
 import { Product } from "@prisma/client";
 
+interface ProductWithUser extends Product {
+  user: User;
+}
 interface ItemDetailResponse {
   ok: boolean;
-  product: Product;
+  product: ProductWithUser;
 }
 
 const ItemDetail: NextPage = () => {
