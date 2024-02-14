@@ -11,6 +11,7 @@ interface ProductWithUser extends Product {
 interface ItemDetailResponse {
   ok: boolean;
   product: ProductWithUser;
+  relatedProducts: Product[];
 }
 
 const ItemDetail: NextPage = () => {
