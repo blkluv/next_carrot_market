@@ -30,6 +30,11 @@ async function handler(
   const relatedProducts = await client.product.findMany({
     where: {
       OR: terms,
+      AND: {
+        id: {
+          not: id,
+        },
+      },
     },
   });
   console.log(relatedProducts);
