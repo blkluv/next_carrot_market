@@ -38,7 +38,7 @@ async function handler(
     },
   });
   console.log(relatedProducts);
-  res.json({ ok: true, product });
+  res.json({ ok: true, product, relatedProducts });
 }
 
 export default withApiSession(
