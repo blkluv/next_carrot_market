@@ -27,7 +27,12 @@ async function handler(
       contains: word,
     },
   }));
-  console.log(terms);
+  const relatedProducts = await client.product.findMany({
+    where: {
+      OR: terms,
+    },
+  });
+  console.log(relatedProducts);
   res.json({ ok: true, product });
 }
 
