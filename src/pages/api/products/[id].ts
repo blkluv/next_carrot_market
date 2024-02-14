@@ -32,7 +32,7 @@ async function handler(
       OR: terms,
       AND: {
         id: {
-          not: id,
+          not: product?.id,
         },
       },
     },
