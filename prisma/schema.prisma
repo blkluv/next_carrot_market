@@ -48,7 +48,7 @@ model Fav {
   id          Int      @id @default(autoincrement())
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        Int
-  produdct    Product  @relation(fields: [productId], references: [id], onDelete: Cascase)
+  produdct    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId   Int
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
