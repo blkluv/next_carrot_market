@@ -7,8 +7,15 @@ async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
-  const { id } = req.query;
-
+  const {
+    query: { id },
+    session: { user },
+  } = req;
+  const aleadyExists = await client.fav.findFirst({
+    where: {
+      productId: +id.toString(),
+    },
+  });
   res.json({ ok: true });
 }
 
