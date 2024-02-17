@@ -14,9 +14,33 @@ async function handler(
   const alreadyExists = await client.fav.findFirst({
     where: {
       productId: +id.toString(),
-      userId: user?.id.
+      userId: user?.id,
     },
   });
+  if (alreadyExists) {
+    // delete
+    await client.fav.delete({
+      where: {
+        id: alreadyExists.id,
+      },
+    });
+  } else {
+    // create
+    await client.fav.create({
+      data: {
+        user: {
+          connect: {
+            id: user?.id,
+          },
+        },
+        product: {
+          connect: {
+            id: +id?.toString(),
+          },
+        },
+      },
+    });
+  }
   res.json({ ok: true });
 }
 
