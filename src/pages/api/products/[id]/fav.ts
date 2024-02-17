@@ -11,7 +11,7 @@ async function handler(
     query: { id },
     session: { user },
   } = req;
-  const aleadyExists = await client.fav.findFirst({
+  const alreadyExists = await client.fav.findFirst({
     where: {
       productId: +id.toString(),
       userId: user?.id.
