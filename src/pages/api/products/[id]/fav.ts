@@ -14,6 +14,7 @@ async function handler(
   const aleadyExists = await client.fav.findFirst({
     where: {
       productId: +id.toString(),
+      userId: user?.id.
     },
   });
   res.json({ ok: true });
