@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Button from "src/components/button";
 import Layout from "src/components/layout";
 import { useRouter } from "next/router";
 import useSWR from "swr";
@@ -48,9 +49,7 @@ const ItemDetail: NextPage = () => {
             </span>
             <p className="my-6 text-gray-700 ">{data?.product?.description}</p>
             <div className="flex items-center justify-between space-x-2">
-              <button className="flex-1 py-3 font-medium text-white bg-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-orange-600 focus:ring-orange-500 ">
-                Talk to seller
-              </button>
+              <Button large text="Talk to seller" />
               <button
                 onClick={onFavClick}
                 className="flex items-center justify-center p-3 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500"
