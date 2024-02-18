@@ -3,7 +3,7 @@ import Layout from "src/components/layout";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import Link from "next/link";
-import { Product } from "@prisma/client";
+import { Product, User } from "@prisma/client";
 
 interface ProductWithUser extends Product {
   user: User;
