@@ -19,6 +19,7 @@ const ItemDetail: NextPage = () => {
   const { data } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
+  const onFavClick = () => {};
   return (
     <Layout canGoBack>
       <div className="px-4 py-10">
@@ -50,7 +51,10 @@ const ItemDetail: NextPage = () => {
               <button className="flex-1 py-3 font-medium text-white bg-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-orange-600 focus:ring-orange-500 ">
                 Talk to seller
               </button>
-              <button className="flex items-center justify-center p-3 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500">
+              <button
+                onClick={onFavClick}
+                className="flex items-center justify-center p-3 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500"
+              >
                 <svg
                   className="w-6 h-6 "
                   xmlns="http://www.w3.org/2000/svg"
