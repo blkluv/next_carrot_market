@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import Link from "next/link";
 import { Product, User } from "@prisma/client";
+import useMutation from "src/libs/client/useMutation";
 
 interface ProductWithUser extends Product {
   user: User;
@@ -20,6 +21,7 @@ const ItemDetail: NextPage = () => {
   const { data } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
+  const [toggleFav] = useMutation(`/api/products/${router.query.id}/fav`);
   const onFavClick = () => {};
   return (
     <Layout canGoBack>
