@@ -40,12 +40,14 @@ async function handler(
       },
     },
   });
-  const isLiked = await client.fav.findFirst({
-    where: {
-      productId: product?.id,
-      userId: user?.id,
-    },
-  });
+  const isLiked = Boolean(
+    await client.fav.findFirst({
+      where: {
+        productId: product?.id,
+        userId: user?.id,
+      },
+    })
+  );
   res.json({ ok: true, product, isLiked, relatedProducts });
 }
 
