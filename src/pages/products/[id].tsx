@@ -59,8 +59,8 @@ const ItemDetail: NextPage = () => {
               <button
                 onClick={onFavClick}
                 className={cls(
-                  "p-3 rounded-md flex items-center hover:bg-gray-100 justify-center"
-                  data?.product?.isLiked ? "text-red-400 hover:text-red-500" : "text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                  "p-3 rounded-md flex items-center hover:bg-gray-100 justify-center"?
+                  data?.isLiked ? "text-red-400 hover:text-red-500" : "text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                 )}
               >
                 <svg
