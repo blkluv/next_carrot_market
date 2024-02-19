@@ -40,8 +40,13 @@ async function handler(
       },
     },
   });
-  console.log(relatedProducts);
-  res.json({ ok: true, product, relatedProducts });
+  const isLiked = await client.fav.findFirst({
+    where: {
+      productId: product?.id,
+      userId: user?.id,
+    },
+  });
+  res.json({ ok: true, product, isLiked, relatedProducts });
 }
 
 export default withApiSession(
