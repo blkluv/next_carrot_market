@@ -6,6 +6,7 @@ import useSWR from "swr";
 import Link from "next/link";
 import { Product, User } from "@prisma/client";
 import useMutation from "src/libs/client/useMutation";
+import { cls } from "src/libs/client/utils";
 
 interface ProductWithUser extends Product {
   user: User;
@@ -56,7 +57,10 @@ const ItemDetail: NextPage = () => {
               <Button large text="Talk to seller" />
               <button
                 onClick={onFavClick}
-                className="flex items-center justify-center p-3 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500"
+                className={cls(
+                  "p-3 rounded-md flex items-center hover:bg-gray-100 justify-center"
+                  data?.product?.isLiked ? "text-red-400 hover:text-red-500" : "text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                )}
               >
                 <svg
                   className="w-6 h-6 "
