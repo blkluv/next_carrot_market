@@ -30,13 +30,7 @@ const ItemDetail: NextPage = () => {
   const onFavClick = () => {
     if (!data) return;
     boundMutate((prev) => prev && { ...prev, isLiked: !prev.isLiked }, false);
-    mutate(
-      "/api/users/me",
-      (prev: any) => {
-        ok: !prev.ok;
-      },
-      false
-    );
+    // mutate("/api/users/me", (prev: any) => { ok: !prev.ok;}, false);
     // toggleFav({});
   };
   return (
