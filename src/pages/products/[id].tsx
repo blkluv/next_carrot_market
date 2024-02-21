@@ -23,7 +23,7 @@ const ItemDetail: NextPage = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();
   const { mutate } = useSWRConfig();
-  const { data, mutate } = useSWR<ItemDetailResponse>(
+  const { data, mutate: boundMutate } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
   const [toggleFav] = useMutation(`/api/products/${router.query.id}/fav`);
