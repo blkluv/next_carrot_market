@@ -27,7 +27,7 @@ const ItemDetail: NextPage = () => {
   const onFavClick = () => {
     if (!data) return;
     mutate({ ...data, isLiked: !data.isLiked }, false);
-    toggleFav({});
+    // toggleFav({});
   };
   return (
     <Layout canGoBack>
