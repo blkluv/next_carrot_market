@@ -29,7 +29,7 @@ const ItemDetail: NextPage = () => {
   const [toggleFav] = useMutation(`/api/products/${router.query.id}/fav`);
   const onFavClick = () => {
     if (!data) return;
-    boundMutate({ ...data, isLiked: !data.isLiked }, false);
+    boundMutate((prev) => ({ ...data, isLiked: !data.isLiked }), false);
     mutate(
       "/api/users/me",
       (prev: any) => {
