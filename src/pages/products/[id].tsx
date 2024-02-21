@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Product, User } from "@prisma/client";
 import useMutation from "src/libs/client/useMutation";
 import { cls } from "src/libs/client/utils";
+import useUser from "src/libs/client/useUser";
 
 interface ProductWithUser extends Product {
   user: User;
@@ -19,6 +20,7 @@ interface ItemDetailResponse {
 }
 
 const ItemDetail: NextPage = () => {
+  const { user, isLoading } = useUser();
   const router = useRouter();
   const { data, mutate } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
