@@ -14,7 +14,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@types/nodemailer": "^6.4.14",
     "iron-session": "^6.3.1",
-    "next": "14.2.12",
+    "next": "14.2.20",
     "nodemailer": "^6.9.8",
     "react": "^18",
     "react-dom": "^18",
